@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Batting Training",
+        "price": 45000,
+        "description": "Will give you training about how to bat",
+        "img": "https://i.ibb.co/B31mq7Q/bat.png"
+    },
+    {
+        "id": 2,
+        "name": "Batting Training",
+        "price": 45000,
+        "description": "Will give you training about how to bat",
+        "img": "https://i.ibb.co/B31mq7Q/bat.png"
+    },
+    {
+        "id": 3,
+        "name": "Batting Training",
+        "price": 45000,
+        "description": "Will give you training about how to bat",
+        "img": "https://i.ibb.co/B31mq7Q/bat.png"
+    }
+]
