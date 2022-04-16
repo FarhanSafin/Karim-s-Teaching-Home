@@ -1,23 +1,66 @@
 [
+
     {
         "id": 1,
-        "name": "Batting Training",
-        "price": 45000,
-        "description": "Will give you training about how to bat",
-        "img": "https://i.ibb.co/B31mq7Q/bat.png"
+        "name": "Science Subjects for HSC",
+        "price": 10000,
+        "description": "Will teach you all the subject for group science. 3 days a week",
+        "img": "https://i.ibb.co/WKLMZDR/2378472.jpg"
     },
     {
         "id": 2,
-        "name": "Batting Training",
-        "price": 45000,
-        "description": "Will give you training about how to bat",
-        "img": "https://i.ibb.co/B31mq7Q/bat.png"
+        "name": "Physics class for HSC and Admission",
+        "price": 1200,
+        "description": "Will teach you both papers of physics. 4 days a week.",
+        "img": "https://i.ibb.co/NTfq2Px/4542742.jpg"
     },
     {
         "id": 3,
-        "name": "Batting Training",
-        "price": 45000,
-        "description": "Will give you training about how to bat",
-        "img": "https://i.ibb.co/B31mq7Q/bat.png"
+        "name": "Math class for HSC and Admission",
+        "price": 1200,
+        "description": "Will complete the math book within 5 months.",
+        "img": "https://i.ibb.co/fpmh2j0/2423222.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Chemistry class for HSC and Admission",
+        "price": 1200,
+        "description": "Will give tuition about chemistry. Duration 6 months.",
+        "img": "https://i.ibb.co/vxHJNn5/2360511.jpg"
+    },    
+    {
+        "id": 5,
+        "name": "ICT class for HSC and Admission",
+        "price": 1000,
+        "description": "Will finish the hsc ict syllabus within 2 months.",
+        "img": "https://i.ibb.co/QfknhVW/2650401.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Science Subject for SSC",
+        "price": 7000,
+        "description": "Will teach you all the subject for group science. 3 days a week",
+        "img": "https://i.ibb.co/thwTHdJ/biology-subject-arrangement-with-insects.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Math class for SSC",
+        "price": 1000,
+        "description": "Will finish the math book within 7 months. I will take special class if needed for math.",
+        "img": "https://i.ibb.co/n8Z9273/2423231.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Chemistry class for SSC",
+        "price": 1000,
+        "description": "Will finish the math book within 8 months.",
+        "img": "https://i.ibb.co/ZX8RmxW/2357346.jpg"
+    }, 
+    {
+        "id": 9,
+        "name": "Physics class for SSC",
+        "price": 1000,
+        "description": "Will finish the math book within 8 months.",
+        "img": "https://i.ibb.co/PTy9Cfc/3607741.jpg"
     }
 ]
