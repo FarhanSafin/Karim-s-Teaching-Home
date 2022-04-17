@@ -4,16 +4,16 @@ import './NotFound.css'
 
 const NotFound = () => {
     return (
-        <div className='mt-60'>
-            <h1 className='text-4xl'>Page Not Found</h1>
+        <div className='mt-5'>
+            <h1 className='text-center text-danger'>Page Not Found</h1>
             <section className="error-container">
               <span><span>4</span></span>
               <span>0</span>
               <span><span>4</span></span>
             </section>
             
-            <div className='link-container'>
-              <Link to="/home">Return to Home</Link>
+            <div className='text-center p-5 mt-5'>
+              <Link className='text-decoration-none text-danger' to="/home"><h2>Home</h2></Link>
             </div>
         </div>
     );
