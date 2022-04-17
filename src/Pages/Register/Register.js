@@ -5,6 +5,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import auth from '../../firebase.init';
 import './Register.css'
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
+import Loading from '../Shared/Loading/Loading';
 
 const Register = () => {
 
@@ -17,11 +18,9 @@ const Register = () => {
     error,
   ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
 
+
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const navigate = useNavigate();
-    const location = useLocation();
-
-    let from = location.state?.from?.pathname || "/";
 
     const navigateLogin = () => {
         navigate('/login')
@@ -42,6 +41,10 @@ const Register = () => {
 
     if(error){
       alert('something is wrong. Please try again later.')
+    }
+
+    if(loading || updating){
+      return <Loading></Loading>
     }
 
     return (
