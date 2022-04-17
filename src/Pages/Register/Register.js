@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -7,6 +7,8 @@ import './Register.css'
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
 const Register = () => {
+
+  const [agree, setAgree] = useState(false);
 
   const [
     createUserWithEmailAndPassword,
@@ -59,11 +61,15 @@ const Register = () => {
     <Form.Label>Password</Form.Label>
     <Form.Control ref={passwordRef} className='text-primary' type="password" placeholder="Password" required/>
   </Form.Group>
-  <Button variant="primary" type="submit">
+  <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
+  <label className={`ps-2 ${agree ? '' : 'text-danger' }`} htmlFor="terms">Accept all terms and conditions</label>
+  <Button 
+  disabled={!agree}
+  className='mt-4 w-25 d-block mx-auto mb-4' variant="primary" type="submit">
     Register
   </Button>
 </Form>
-            <p className='mb-5 mt-3'>Already have an account? <Link to="/login" className='text-danger' onClick={navigateLogin}>Please Login</Link></p>
+            <p className='mb-5 mt-3'>Already have an account? <Link to="/login" className='text-primary' onClick={navigateLogin}>Please Login</Link></p>
             <SocialLogin></SocialLogin>
         </div>
     );

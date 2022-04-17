@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import SocialLogin from './SocialLogin/SocialLogin';
@@ -40,6 +40,17 @@ const Login = () => {
         navigate('/register')
     }
 
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+      auth
+    );
+
+
+    const resetPassword = async() => {
+      const email = emailRef.current.value;
+      await sendPasswordResetEmail(email);
+          alert('Sent email');
+    }
+
     return (
         <div className='container w-50 mx-auto'>
             <h2 className='text-primary text-center mt-2'>Please Login</h2>
@@ -53,11 +64,12 @@ const Login = () => {
     <Form.Label>Password</Form.Label>
     <Form.Control ref={passwordRef} className='text-primary' type="password" placeholder="Password" required/>
   </Form.Group>
-  <Button className='mt-4' variant="primary" type="submit">
+  <Button className='mt-4 w-25 d-block mx-auto' variant="primary" type="submit">
     Login
   </Button>
 </Form>
-<p className='mb-5 mt-4'>New Here? <Link to="/register" className='text-danger' onClick={navigateRegister}>Please Register</Link></p>
+<p className='mb-5 mt-4'>New Here? <Link to="/register" className='text-primary' onClick={navigateRegister}>Please Register</Link></p>
+<p className='mb-5 mt-4'>Forgot Password? <Link to="/register" className='text-primary' onClick={resetPassword}>Reset Password</Link></p>
 <SocialLogin></SocialLogin>
         </div>
     );
