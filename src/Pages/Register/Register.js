@@ -1,11 +1,14 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import './Register.css'
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
 import Loading from '../Shared/Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Register = () => {
 
@@ -13,13 +16,12 @@ const Register = () => {
 
   const [
     createUserWithEmailAndPassword,
-    user,
     loading,
     error,
   ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
 
 
-  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const [updateProfile, updating] = useUpdateProfile(auth);
     const navigate = useNavigate();
 
     const navigateLogin = () => {
@@ -40,7 +42,7 @@ const Register = () => {
     }
 
     if(error){
-      alert('something is wrong. Please try again later.')
+      toast('something is wrong. Please try again later.')
     }
 
     if(loading || updating){
@@ -74,6 +76,7 @@ const Register = () => {
 </Form>
             <p className='mb-5 mt-3'>Already have an account? <Link to="/login" className='text-primary' onClick={navigateLogin}>Please Login</Link></p>
             <SocialLogin></SocialLogin>
+            <ToastContainer />
         </div>
     );
 };
