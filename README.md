@@ -6,6 +6,15 @@ Karim's Student Teaching Service [Live Preview](https://teaching-tutor-3cdb0.web
 
 In the project, you can see different teaching class provided by Karim. In the home the services he provide is listed one by one. You can checkout or book Karim by selecting the service you want or desire. To view or access the checkout page you will need to be logined in the web app. You can either login using the traditional way which is using your email and password or you can use Google's authentication system to login. If you dont have a account using your email in the website, you can register yourself on the register web page. After logging in you will be able to redirected to the checkout page of the service you selected.
 
+
+In Short :
+ * Checkout service which you desire
+ * Checkout page is protected route which means you have to be logged in to view/access the page
+ * Use traditional email and password for login and registration
+ * You can also choose your Google account to Sign In
+ * After logging in you will be redirected to be checkout page
+ 
+
 ## Technologies Used
 
 ### `React`

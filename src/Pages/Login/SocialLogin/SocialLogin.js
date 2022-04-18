@@ -11,8 +11,6 @@ import './SocialLogin.css'
 const SocialLogin = () => {
 
     const location = useLocation();
-
-
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
 
@@ -24,11 +22,12 @@ const SocialLogin = () => {
         }
       },[user])
       
-      useEffect(() => {
+    useEffect(() => {
         if (error) {
            toast('Social Login has been closed. Please try again');
         }
       },[error])
+
     if(loading) {
         return <Loading></Loading>
     }

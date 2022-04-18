@@ -18,11 +18,11 @@ const Services = () => {
             <h2 className='text-info text-center mt-5'>My Services</h2>
             <div className='row'>
             {
-                services.map(service => <Service
+                services.map(service => 
+                <Service
                     key={service.id}
                     service={service}
                 >
-                    
                 </Service>)
             }
             </div>

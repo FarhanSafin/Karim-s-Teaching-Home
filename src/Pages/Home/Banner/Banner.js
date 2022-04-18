@@ -3,13 +3,13 @@ import { Carousel } from 'react-bootstrap';
 
 const Banner = () => {
 
-    const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
 
-    return (
+  return (
         <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
           <img
