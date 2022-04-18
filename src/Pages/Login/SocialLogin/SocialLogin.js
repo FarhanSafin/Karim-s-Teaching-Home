@@ -23,12 +23,9 @@ const SocialLogin = () => {
       
       useEffect(() => {
         if (error) {
-            errorElement = toast('Social Login has been closed. Please try again');
+           toast('Social Login has been closed. Please try again');
         }
       },[error])
-
-    let errorElement;
-
     if(loading) {
         return <Loading></Loading>
     }
@@ -40,7 +37,6 @@ const SocialLogin = () => {
                 <p className='mt-3 px-2'>or</p>
                 <div style={{height: '1px'}} className='bg-primary w-50'></div>
             </div>
-            {errorElement}
             <div>
                 <button onClick={() => signInWithGoogle()} className='btn login-with-google-btn button-width mb-2 mt-5 d-flex mx-auto'>
                     <img className='mt-1' src={google} alt="googleimage" />
