@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import google from '../../../images/social/google.png';
 import Loading from '../../Shared/Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './SocialLogin.css'
 
 const SocialLogin = () => {
@@ -12,22 +14,25 @@ const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
 
+    useEffect(() => {
+        if(user){
+            navigate('/home')
+        }
+      },[user])
+
+      
+      useEffect(() => {
+        if (error) {
+            errorElement = toast('Social Login has been closed. Please try again');
+        }
+      },[error])
+
     let errorElement;
 
     if(loading) {
         return <Loading></Loading>
     }
 
-
-    if (error) {
-          errorElement = <p className='text-danger'>Error: {error.message}</p>
-    
-      }
-
-
-      if(user){
-          navigate('/home')
-      }
     return (
         <div>
             <div className='d-flex align-items-center'>
@@ -42,6 +47,7 @@ const SocialLogin = () => {
                     <span className='px-2'>Sign in with Google</span>
                 </button>
             </div>
+            <ToastContainer />
         </div>
     );
 };

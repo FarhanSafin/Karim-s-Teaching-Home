@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
@@ -16,6 +16,7 @@ const Register = () => {
 
   const [
     createUserWithEmailAndPassword,
+    user,
     loading,
     error,
   ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
@@ -38,12 +39,18 @@ const Register = () => {
         const password = passwordRef.current.value;
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName});
-        navigate('/home')
     }
 
-    if(error){
-      toast('something is wrong. Please try again later.')
+    useEffect( () => {if(user){
+      navigate('/home')
+    }},[user]);
+
+    useEffect( () =>  {
+      if(error){
+      toast("User already exists")
     }
+    },[error])
+
 
     if(loading || updating){
       return <Loading></Loading>

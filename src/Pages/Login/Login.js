@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -22,15 +22,28 @@ const Login = () => {
       error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    let from = location.state?.from?.pathname || "/";
 
-    if(user){
-      navigate(from, { replace: true });
-    }
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+      auth
+    );
 
-    if(error){
+    let from = location.state?.from?.pathname || "/about";
+
+
+    useEffect( () => {
+      if(user){
+        navigate(from, { replace: true });
+      }
+    },[user])
+
+
+    useEffect(() => {    
+      if(error){
       toast('Wrong username or password')
     }
+  },[error]);
+
+
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -43,9 +56,7 @@ const Login = () => {
         navigate('/register')
     }
 
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
-      auth
-    );
+
 
     if(loading || sending){
       return <Loading></Loading>
@@ -56,12 +67,15 @@ const Login = () => {
       const email = emailRef.current.value;
       if(email){
         await sendPasswordResetEmail(email);
-        toast('Sent email');
+        toast('Please check your provided email for further information');
       }
       else{
         toast('Please Enter your email address');
       }
     }
+
+    
+
 
     return (
         <div className='container w-50 mx-auto'>

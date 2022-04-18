@@ -11,11 +11,11 @@ const Footer = () => {
             <div className="row gy-4 gx-5">
                 <div className="col-lg-4 col-md-6">
                     <h5 className="h1 text-white">Teaching Tutor Karim</h5>
-                    <p className="small text-muted">The best you can find in affordable price.</p>
+                    <p className="small text-muted">The best tutor you can find in affordable price.</p>
                     <p className="small text-muted mb-0">&copy; Copyrights. {year} All rights reserved.</p>
                 </div>
                 <div className="col-lg-2 col-md-6">
-                    <h5 className="text-white mb-3">Quick links</h5>
+                    <h5 className="text-white mb-3">Navigate</h5>
                     <ul className="list-unstyled text-muted">
                         <li><Link to="/home">Home</Link></li>
                         <li><Link to="/about">About</Link></li>
