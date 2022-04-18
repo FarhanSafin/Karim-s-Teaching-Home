@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className="col-lg-4 col-md-6">
                     <h5 className="h1 text-white">Teaching Tutor Karim</h5>
                     <p className="small text-muted">The best tutor you can find in affordable price.</p>
-                    <p className="small text-muted mb-0">&copy; Copyrights. {year} All rights reserved.</p>
+                    <p className="small text-muted mb-0">&copy; {year}. All rights reserved.</p>
                 </div>
                 <div className="col-lg-2 col-md-6">
                     <h5 className="text-white mb-3">Navigate</h5>
