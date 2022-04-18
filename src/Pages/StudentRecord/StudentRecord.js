@@ -18,6 +18,7 @@ const StudentRecord = () => {
         <div className='App'>
         <h2 className='text-center text-info mt-5 mb-5'>My Prev Student Records</h2>
           <table className='mb-5'>
+            <tbody>
             <tr>
               <th className='text-info'>Name</th>
               <th className='text-info'>Age</th>
@@ -32,6 +33,7 @@ const StudentRecord = () => {
                 </tr>
               )
             })}
+            </tbody>
           </table>
         </div>
       );
