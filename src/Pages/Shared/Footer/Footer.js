@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <footer className="w-100 py-4 flex-shrink-0">
         <div className="container py-4">
-            <div className="row gy-4 gx-5">
+            <div className="row gy-4 gx-3">
                 <div className="col-lg-4 col-md-6">
                     <h5 className="h1 text-white">Teaching Tutor Karim</h5>
                     <p className="small text-muted">The best tutor you can find in affordable price.</p>

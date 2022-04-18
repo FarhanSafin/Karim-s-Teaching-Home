@@ -6,7 +6,7 @@ const Service = ({service}) => {
     const {name, img, description, price} = service
     return (
         <div className='g-5 col-sm-12 col-md-6 col-lg-4 text-center color'>
-            <div className="card" style={{width: "18rem"}}>
+            <div className="card mx-auto" style={{width: "18rem"}}>
                 <img className="card-img-top" src={img} alt="cardimage"/>
                 <div className="card-body">
                     <h3 className="card-title">{name}</h3>

@@ -42,9 +42,9 @@ const SocialLogin = () => {
             </div>
             {errorElement}
             <div>
-                <button onClick={() => signInWithGoogle()} className='btn login-with-google-btn w-50 mb-2 mt-5 d-block mx-auto'>
-                    <img src={google} alt="googleimage" />
-                    <span className='px-2'>Sign in with Google</span>
+                <button onClick={() => signInWithGoogle()} className='btn login-with-google-btn button-width mb-2 mt-5 d-flex mx-auto'>
+                    <img className='mt-1' src={google} alt="googleimage" />
+                    <span className='mx-auto margin'>Sign in with Google</span>
                 </button>
             </div>
             <ToastContainer />

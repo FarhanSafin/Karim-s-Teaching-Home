@@ -77,7 +77,7 @@ const Register = () => {
   <label className={`ps-2 ${agree ? '' : 'text-danger' }`} htmlFor="terms">Accept all terms and conditions</label>
   <Button 
   disabled={!agree}
-  className='mt-4 w-25 d-block mx-auto mb-4' variant="primary" type="submit">
+  className='mt-4 w-50 d-block mx-auto mb-4' variant="primary" type="submit">
     Register
   </Button>
 </Form>
