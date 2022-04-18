@@ -1,0 +1,14 @@
+table {
+  border: 2px solid rgba(39, 198, 204, 0.644);
+  width: 800px;
+  height: 200px;
+  margin-left: 520px;
+}
+  
+th {
+  border-bottom: 1px solid black;
+}
+  
+td {
+  text-align: center;
+}
