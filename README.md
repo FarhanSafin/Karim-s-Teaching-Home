@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Karim's Teaching Home
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Karim's Student Teaching Service [Live Preview](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Features and Functionalities
 
-In the project directory, you can run:
+In the project, you can see different teaching class provided by Karim. In the home the services he provide is listed one by one. You can checkout or book Karim by selecting the service you want or desire. To view or access the checkout page you will need to be logined in the web app. You can either login using the traditional way which is using your email and password or you can use Google's authentication system to login. If you dont have a account using your email in the website, you can register yourself on the register web page. After logging in you will be able to redirected to the checkout page of the service you selected.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `React`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A JavaScript library for building user interfaces
 
-### `npm test`
+### `Bootstrap`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Used to quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
 
-### `npm run build`
+### `React-Router`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+With React Router, routing through page is easier. Help you to route through different pages of a web app. Nested routes add both segments to the URL and layouts to the UI hierarchy. As the URL changes, your layouts automatically change with it.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `React-Toastify`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React-Toastify allows you to add notifications to your app with ease.
 
-### `npm run eject`
+### `Firebase`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Firebase helps you build and run successful apps. In this web app firebase takes care of the authentication and authorization system. It is backed by Google.

@@ -44,7 +44,7 @@ const Banner = () => {
           <Carousel.Caption>
             <h3>Will support you 24/7</h3>
             <p>
-              Study is a 24/7 process. So anytime you need me just sent me a message and I will assist you
+              Anytime you need me just sent me a message and I will assist you.
             </p>
           </Carousel.Caption>
         </Carousel.Item>

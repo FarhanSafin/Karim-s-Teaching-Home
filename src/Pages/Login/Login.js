@@ -27,7 +27,7 @@ const Login = () => {
       auth
     );
 
-    let from = location.state?.from?.pathname || "/about";
+    let from = location.state?.from?.pathname || "/";
 
 
     useEffect( () => {
@@ -62,11 +62,11 @@ const Login = () => {
       return <Loading></Loading>
     }
 
-    const resetPassword = () => {
+    const resetPassword = async () => {
       const email = emailRef.current.value;
       if(email){
-        sendPasswordResetEmail(email);
-        alert('Please check your provided email for further information');
+        await sendPasswordResetEmail(email);
+        toast ('Please check your provided email for further information');
       }
       else{
         toast('Please Enter your email address');
